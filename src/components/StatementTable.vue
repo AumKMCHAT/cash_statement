@@ -13,16 +13,16 @@
             <tr v-for="(state, index) in statements" :key="index">
                 <td>{{ state.date }}</td>
                 <td>{{ state.information }}</td>
-                <td>{{ state.income }}</td>
-                <td>{{ state.expense }}</td>
+                <td id="income">{{ state.income }}</td>
+                <td id="expense">{{ state.expense }}</td>
             </tr>
         </tbody>
         </table>
 
         <div class="summary">
-            <h4>รายรับ: {{ sumIncome() }}</h4>
-            <h4>รายจ่าย: {{ sumExpense() }}</h4>
-            <h4>คงเหลือ: {{ sumIncome() - sumExpense() }}</h4>
+            <h4 id="income">รายรับ: {{ sumIncome() }}</h4>
+            <h4 id="expense">รายจ่าย: {{ sumExpense() }}</h4>
+            <h4 id="balance">คงเหลือ: {{ sumIncome() - sumExpense() }}</h4>
         </div>
     </div>
     
@@ -79,7 +79,7 @@ export default {
         border: 1px solid black;
     }
     thead {
-        background-color: #04AA6D;
+        background-color: #0476aa;
         color: white;
     }
     tr:nth-child(even) {
@@ -87,6 +87,15 @@ export default {
     }
     tr:hover {
         background-color: #ddd;
+    }
+    #income {
+        color: rgb(25, 161, 25);
+    }
+    #expense {
+        color: red;
+    }
+    .summary {
+        background-color: #f2f2f2;
     }
     
 </style>>

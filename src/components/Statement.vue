@@ -5,10 +5,10 @@
     
     <div class="information">
       <label for="number">จำนวนเงิน:</label>
-      <input type="number" id="number" v-model="form.number">
+      <input type="number" id="number" placeholder="จำนวนเงิน" v-model="form.number">
       <br>
       <label for="information">รายละเอียด:</label>
-      <input type="information" id="information" v-model="form.information">
+      <input type="information" id="information" placeholder="รายละเอียด" v-model="form.information">
     </div>
 
     <div class="category">
@@ -87,12 +87,13 @@ export default {
     margin-bottom: -2px;
   }
 
-  // .information {
-  //   background-color: yellow;
-  // }
+  button {
+    background-color: green;
+    color: white;
+  }
 
-  // .information:hover {
-  //   background-color: rgb(0, 60, 255);
-  // }
+  button:hover {
+    color: black;
+  }
 
 </style>
